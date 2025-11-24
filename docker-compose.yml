@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+    volumes:
+      # Mount these directories for hot reload
+      - ./cogs:/app/cogs
+      - ./utils:/app/utils
+      - ./data:/app/data

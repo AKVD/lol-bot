@@ -1,0 +1,1274 @@
+{
+  "jinx": {
+    "top_synergies": [
+      {
+        "name": "Lulu",
+        "reason": "攻撃速度バフとシールドでジンクスを守りながら火力を最大化"
+      },
+      {
+        "name": "Nami",
+        "reason": "サステインとCCで序盤を安定化、バフでレイトゲームを強化"
+      },
+      {
+        "name": "Thresh",
+        "reason": "強力なピールとエンゲージでジンクスを保護"
+      },
+      {
+        "name": "Braum",
+        "reason": "防御的なサポートでスケーリングを守る"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "強力なCC連鎖でキルプレッシャー"
+      }
+    ]
+  },
+  "caitlyn": {
+    "top_synergies": [
+      {
+        "name": "Morgana",
+        "reason": "トラップとバインドのシナジーで強力なポーク"
+      },
+      {
+        "name": "Lux",
+        "reason": "長射程ポークとバーストダメージ"
+      },
+      {
+        "name": "Karma",
+        "reason": "ポークとシールドでレーニング優位"
+      },
+      {
+        "name": "Zyra",
+        "reason": "ゾーニングと集団戦での火力"
+      },
+      {
+        "name": "Xerath",
+        "reason": "極長射程アーティラリーコンビ"
+      }
+    ]
+  },
+  "vayne": {
+    "top_synergies": [
+      {
+        "name": "Lulu",
+        "reason": "バフとシールドで1v9キャリー性能を最大化"
+      },
+      {
+        "name": "Thresh",
+        "reason": "ピールとエンゲージでスケーリングをサポート"
+      },
+      {
+        "name": "Braum",
+        "reason": "防御的サポートで安全にファーム"
+      },
+      {
+        "name": "Tahm Kench",
+        "reason": "最強のピールでヴェインを完全保護"
+      },
+      {
+        "name": "Senna",
+        "reason": "スケーリングコンビでレイトゲーム無双"
+      }
+    ]
+  },
+  "ashe": {
+    "top_synergies": [
+      {
+        "name": "Zyra",
+        "reason": "スローとルートの連鎖でゾーニング"
+      },
+      {
+        "name": "Lux",
+        "reason": "CCチェインとバーストダメージ"
+      },
+      {
+        "name": "Thresh",
+        "reason": "エンゲージとピールの両立"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "CC連鎖でガンク耐性"
+      },
+      {
+        "name": "Morgana",
+        "reason": "バインドとアローの組み合わせ"
+      }
+    ]
+  },
+  "ezreal": {
+    "top_synergies": [
+      {
+        "name": "Karma",
+        "reason": "ポークとシールドでセーフプレイ"
+      },
+      {
+        "name": "Yuumi",
+        "reason": "モビリティとサステイン"
+      },
+      {
+        "name": "Lux",
+        "reason": "バーストダメージとポーク"
+      },
+      {
+        "name": "Nami",
+        "reason": "サステインとバフ"
+      },
+      {
+        "name": "Zilean",
+        "reason": "セーフティとスケーリング"
+      }
+    ]
+  },
+  "kaisa": {
+    "top_synergies": [
+      {
+        "name": "Nautilus",
+        "reason": "CCチェインでプラズマスタック"
+      },
+      {
+        "name": "Leona",
+        "reason": "エンゲージとバーストダメージ"
+      },
+      {
+        "name": "Alistar",
+        "reason": "強力なエンゲージとピール"
+      },
+      {
+        "name": "Thresh",
+        "reason": "柔軟なエンゲージとピール"
+      },
+      {
+        "name": "Rakan",
+        "reason": "エンゲージとチームファイト"
+      }
+    ]
+  },
+  "missfortune": {
+    "top_synergies": [
+      {
+        "name": "Leona",
+        "reason": "エンゲージからのUlt確定"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "CCロックダウンでUlt最大化"
+      },
+      {
+        "name": "Thresh",
+        "reason": "柔軟なエンゲージとゾーニング"
+      },
+      {
+        "name": "Zyra",
+        "reason": "AOEダメージシナジー"
+      },
+      {
+        "name": "Amumu",
+        "reason": "UltコンボでAOE壊滅"
+      }
+    ]
+  },
+  "sivir": {
+    "top_synergies": [
+      {
+        "name": "Karma",
+        "reason": "ウェーブクリアとエンゲージ"
+      },
+      {
+        "name": "Lulu",
+        "reason": "バフとシールドでADCキャリー"
+      },
+      {
+        "name": "Nami",
+        "reason": "サステインとバフ"
+      },
+      {
+        "name": "Alistar",
+        "reason": "エンゲージサポート"
+      },
+      {
+        "name": "Yuumi",
+        "reason": "モビリティバフとサステイン"
+      }
+    ]
+  },
+  "aphelios": {
+    "top_synergies": [
+      {
+        "name": "Thresh",
+        "reason": "柔軟なピールとエンゲージ"
+      },
+      {
+        "name": "Lulu",
+        "reason": "バフとシールドで火力最大化"
+      },
+      {
+        "name": "Braum",
+        "reason": "防御的サポートで安全にスケール"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "エンゲージとピール"
+      },
+      {
+        "name": "Tahm Kench",
+        "reason": "最強のピールで複雑な武器を活用"
+      }
+    ]
+  },
+  "draven": {
+    "top_synergies": [
+      {
+        "name": "Thresh",
+        "reason": "早期キルプレッシャー"
+      },
+      {
+        "name": "Leona",
+        "reason": "アグレッシブなオールイン"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "確実なCCでキル獲得"
+      },
+      {
+        "name": "Blitzcrank",
+        "reason": "フックからのバースト"
+      },
+      {
+        "name": "Alistar",
+        "reason": "強力なエンゲージ"
+      }
+    ]
+  },
+  "lucian": {
+    "top_synergies": [
+      {
+        "name": "Nami",
+        "reason": "バフで早期圧倒とモビリティ"
+      },
+      {
+        "name": "Braum",
+        "reason": "パッシブシナジーとピール"
+      },
+      {
+        "name": "Thresh",
+        "reason": "エンゲージとピールの柔軟性"
+      },
+      {
+        "name": "Leona",
+        "reason": "強力なオールイン"
+      },
+      {
+        "name": "Alistar",
+        "reason": "アグレッシブなエンゲージ"
+      }
+    ]
+  },
+  "tristana": {
+    "top_synergies": [
+      {
+        "name": "Leona",
+        "reason": "オールインバースト"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "CCチェインでキル確定"
+      },
+      {
+        "name": "Alistar",
+        "reason": "タワーダイブ性能"
+      },
+      {
+        "name": "Thresh",
+        "reason": "エンゲージサポート"
+      },
+      {
+        "name": "Lulu",
+        "reason": "バフでレイトゲーム強化"
+      }
+    ]
+  },
+  "twitch": {
+    "top_synergies": [
+      {
+        "name": "Lulu",
+        "reason": "ステルスガンクとバフ"
+      },
+      {
+        "name": "Yuumi",
+        "reason": "モビリティとサステイン"
+      },
+      {
+        "name": "Thresh",
+        "reason": "ピールと柔軟なエンゲージ"
+      },
+      {
+        "name": "Braum",
+        "reason": "防御的サポートでスケール"
+      },
+      {
+        "name": "Tahm Kench",
+        "reason": "最強のピールで安全確保"
+      }
+    ]
+  },
+  "kogmaw": {
+    "top_synergies": [
+      {
+        "name": "Lulu",
+        "reason": "バフでハイパーキャリー無双"
+      },
+      {
+        "name": "Nami",
+        "reason": "サステインとバフ"
+      },
+      {
+        "name": "Thresh",
+        "reason": "ピールとポジショニングサポート"
+      },
+      {
+        "name": "Braum",
+        "reason": "防御的サポートでスケール"
+      },
+      {
+        "name": "Tahm Kench",
+        "reason": "完全なピールで守る"
+      }
+    ]
+  },
+  "varus": {
+    "top_synergies": [
+      {
+        "name": "Thresh",
+        "reason": "CCチェインとエンゲージ"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "ルートアローセットアップ"
+      },
+      {
+        "name": "Lux",
+        "reason": "ポークとバースト"
+      },
+      {
+        "name": "Karma",
+        "reason": "ポークとシールド"
+      },
+      {
+        "name": "Zyra",
+        "reason": "ルートとゾーニング"
+      }
+    ]
+  },
+  "jhin": {
+    "top_synergies": [
+      {
+        "name": "Thresh",
+        "reason": "ルートチェインとエンゲージ"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "CCロックダウン"
+      },
+      {
+        "name": "Morgana",
+        "reason": "バインドとルートシナジー"
+      },
+      {
+        "name": "Leona",
+        "reason": "エンゲージ後のバースト"
+      },
+      {
+        "name": "Zyra",
+        "reason": "ルートとゾーニング"
+      }
+    ]
+  },
+  "samira": {
+    "top_synergies": [
+      {
+        "name": "Alistar",
+        "reason": "ノックアップでUlt発動"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "CCロックダウン"
+      },
+      {
+        "name": "Leona",
+        "reason": "エンゲージとCC"
+      },
+      {
+        "name": "Thresh",
+        "reason": "柔軟なエンゲージ"
+      },
+      {
+        "name": "Rell",
+        "reason": "強力なエンゲージCC"
+      }
+    ]
+  },
+  "senna": {
+    "top_synergies": [
+      {
+        "name": "Tahm Kench",
+        "reason": "ファーム譲渡とピール"
+      },
+      {
+        "name": "Cho'Gath",
+        "reason": "タンクサポートでファーム譲渡"
+      },
+      {
+        "name": "Gragas",
+        "reason": "エンゲージとファーム譲渡"
+      },
+      {
+        "name": "Shen",
+        "reason": "グローバルプレゼンス"
+      },
+      {
+        "name": "Galio",
+        "reason": "ローム性能とエンゲージ"
+      }
+    ]
+  },
+  "ziggs": {
+    "top_synergies": [
+      {
+        "name": "Heimerdinger",
+        "reason": "タワープッシュシナジー"
+      },
+      {
+        "name": "Xerath",
+        "reason": "極長射程ポークシージ"
+      },
+      {
+        "name": "Brand",
+        "reason": "AOEダメージコンビ"
+      },
+      {
+        "name": "Vel'Koz",
+        "reason": "メイジシナジー"
+      },
+      {
+        "name": "Zyra",
+        "reason": "ゾーニングとシージ"
+      }
+    ]
+  },
+  "xayah": {
+    "top_synergies": [
+      {
+        "name": "Rakan",
+        "reason": "専用シナジーとコンビ"
+      },
+      {
+        "name": "Thresh",
+        "reason": "エンゲージとピール"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "CCチェイン"
+      },
+      {
+        "name": "Lulu",
+        "reason": "バフとシールド"
+      },
+      {
+        "name": "Alistar",
+        "reason": "エンゲージサポート"
+      }
+    ]
+  },
+  "kalista": {
+    "top_synergies": [
+      {
+        "name": "Thresh",
+        "reason": "オースバインドとエンゲージ"
+      },
+      {
+        "name": "Alistar",
+        "reason": "ノックアップシナジー"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "タンクバインド"
+      },
+      {
+        "name": "Leona",
+        "reason": "エンゲージCC"
+      },
+      {
+        "name": "Blitzcrank",
+        "reason": "フックとバインド"
+      }
+    ]
+  },
+  "nilah": {
+    "top_synergies": [
+      {
+        "name": "Lulu",
+        "reason": "シールドバフシナジー"
+      },
+      {
+        "name": "Nami",
+        "reason": "バフとサステイン"
+      },
+      {
+        "name": "Yuumi",
+        "reason": "バフコンビ"
+      },
+      {
+        "name": "Karma",
+        "reason": "シールドシナジー"
+      },
+      {
+        "name": "Renata Glasc",
+        "reason": "シールドバフ"
+      }
+    ]
+  },
+  "zeri": {
+    "top_synergies": [
+      {
+        "name": "Lulu",
+        "reason": "スピードバフシナジー"
+      },
+      {
+        "name": "Yuumi",
+        "reason": "モビリティバフ"
+      },
+      {
+        "name": "Nami",
+        "reason": "スピードとバフ"
+      },
+      {
+        "name": "Thresh",
+        "reason": "ピールとエンゲージ"
+      },
+      {
+        "name": "Zilean",
+        "reason": "スピードバフ"
+      }
+    ]
+  },
+  "lulu": {
+    "top_synergies": [
+      {
+        "name": "Jinx",
+        "reason": "攻撃速度バフでハイパーキャリー化"
+      },
+      {
+        "name": "Vayne",
+        "reason": "バフとシールドで1v9性能強化"
+      },
+      {
+        "name": "Kog'Maw",
+        "reason": "バフでハイパーキャリー最大化"
+      },
+      {
+        "name": "Aphelios",
+        "reason": "複雑な武器を安全に活用"
+      },
+      {
+        "name": "Sivir",
+        "reason": "バフでADCキャリー性能強化"
+      }
+    ]
+  },
+  "thresh": {
+    "top_synergies": [
+      {
+        "name": "Jinx",
+        "reason": "ピールとエンゲージの両立"
+      },
+      {
+        "name": "Vayne",
+        "reason": "スケーリングをサポート"
+      },
+      {
+        "name": "Kai'Sa",
+        "reason": "フックでプラズマスタック"
+      },
+      {
+        "name": "Aphelios",
+        "reason": "柔軟なプレイスタイル対応"
+      },
+      {
+        "name": "Draven",
+        "reason": "早期キルプレッシャー"
+      }
+    ]
+  },
+  "nami": {
+    "top_synergies": [
+      {
+        "name": "Jinx",
+        "reason": "サステインとバフでスケーリング"
+      },
+      {
+        "name": "Lucian",
+        "reason": "バフで早期圧倒"
+      },
+      {
+        "name": "Caitlyn",
+        "reason": "ポークとサステイン"
+      },
+      {
+        "name": "Ezreal",
+        "reason": "セーフプレイとポーク"
+      },
+      {
+        "name": "Sivir",
+        "reason": "サステインでレーニング安定"
+      }
+    ]
+  },
+  "leona": {
+    "top_synergies": [
+      {
+        "name": "Kai'Sa",
+        "reason": "エンゲージでプラズマバースト"
+      },
+      {
+        "name": "Miss Fortune",
+        "reason": "UltセットアップCC"
+      },
+      {
+        "name": "Draven",
+        "reason": "アグレッシブなオールイン"
+      },
+      {
+        "name": "Lucian",
+        "reason": "早期キルプレッシャー"
+      },
+      {
+        "name": "Tristana",
+        "reason": "オールインバーストダメージ"
+      }
+    ]
+  },
+  "nautilus": {
+    "top_synergies": [
+      {
+        "name": "Kai'Sa",
+        "reason": "CCでプラズマスタック"
+      },
+      {
+        "name": "Miss Fortune",
+        "reason": "Ultセットアップ"
+      },
+      {
+        "name": "Jinx",
+        "reason": "エンゲージとピール"
+      },
+      {
+        "name": "Aphelios",
+        "reason": "安全を確保"
+      },
+      {
+        "name": "Draven",
+        "reason": "確実なキル獲得"
+      }
+    ]
+  },
+  "braum": {
+    "top_synergies": [
+      {
+        "name": "Lucian",
+        "reason": "パッシブシナジーと早期圧力"
+      },
+      {
+        "name": "Vayne",
+        "reason": "スケーリングを守る"
+      },
+      {
+        "name": "Jinx",
+        "reason": "ハイパーキャリーを保護"
+      },
+      {
+        "name": "Aphelios",
+        "reason": "防御的サポート"
+      },
+      {
+        "name": "Kog'Maw",
+        "reason": "スケーリングサポート"
+      }
+    ]
+  },
+  "morgana": {
+    "top_synergies": [
+      {
+        "name": "Caitlyn",
+        "reason": "トラップとバインドシナジー"
+      },
+      {
+        "name": "Jhin",
+        "reason": "ルートチェイン"
+      },
+      {
+        "name": "Ashe",
+        "reason": "CCチェイン"
+      },
+      {
+        "name": "Varus",
+        "reason": "ポークとCC"
+      },
+      {
+        "name": "Tristana",
+        "reason": "オールイン保護"
+      }
+    ]
+  },
+  "blitzcrank": {
+    "top_synergies": [
+      {
+        "name": "Draven",
+        "reason": "フックからのバースト"
+      },
+      {
+        "name": "Tristana",
+        "reason": "オールインコンビ"
+      },
+      {
+        "name": "Lucian",
+        "reason": "早期キルプレッシャー"
+      },
+      {
+        "name": "Kai'Sa",
+        "reason": "キャッチとバースト"
+      },
+      {
+        "name": "Miss Fortune",
+        "reason": "フックからのUlt"
+      }
+    ]
+  },
+  "chogath": {
+    "top_synergies": [
+      {
+        "name": "Senna",
+        "reason": "ファーム譲渡とタンク性能"
+      },
+      {
+        "name": "Ashe",
+        "reason": "CCチェインとゾーニング"
+      },
+      {
+        "name": "Caitlyn",
+        "reason": "ゾーニングとシージ"
+      },
+      {
+        "name": "Varus",
+        "reason": "CCとポーク"
+      },
+      {
+        "name": "Ziggs",
+        "reason": "タワーシージコンビ"
+      }
+    ]
+  },
+  "alistar": {
+    "top_synergies": [
+      {
+        "name": "Samira",
+        "reason": "ノックアップでUltトリガー"
+      },
+      {
+        "name": "Tristana",
+        "reason": "タワーダイブ性能"
+      },
+      {
+        "name": "Lucian",
+        "reason": "アグレッシブオールイン"
+      },
+      {
+        "name": "Kai'Sa",
+        "reason": "エンゲージとピール"
+      },
+      {
+        "name": "Sivir",
+        "reason": "エンゲージコンビ"
+      }
+    ]
+  },
+  "rakan": {
+    "top_synergies": [
+      {
+        "name": "Xayah",
+        "reason": "専用シナジーとコンビネーション"
+      },
+      {
+        "name": "Kai'Sa",
+        "reason": "エンゲージとチームファイト"
+      },
+      {
+        "name": "Sivir",
+        "reason": "エンゲージサポート"
+      },
+      {
+        "name": "Jinx",
+        "reason": "集団戦性能"
+      },
+      {
+        "name": "Samira",
+        "reason": "エンゲージとCC"
+      }
+    ]
+  },
+  "bard": {
+    "top_synergies": [
+      {
+        "name": "Jhin",
+        "reason": "ローム性能とキャッチ"
+      },
+      {
+        "name": "Caitlyn",
+        "reason": "ポークとゾーニング"
+      },
+      {
+        "name": "Ashe",
+        "reason": "グローバルプレゼンス"
+      },
+      {
+        "name": "Ezreal",
+        "reason": "セーフプレイとローム"
+      },
+      {
+        "name": "Sivir",
+        "reason": "ウェーブクリアとローム"
+      }
+    ]
+  },
+  "pyke": {
+    "top_synergies": [
+      {
+        "name": "Draven",
+        "reason": "早期キルプレッシャー"
+      },
+      {
+        "name": "Jhin",
+        "reason": "バーストダメージ"
+      },
+      {
+        "name": "Miss Fortune",
+        "reason": "AOEダメージ"
+      },
+      {
+        "name": "Kai'Sa",
+        "reason": "キャッチとバースト"
+      },
+      {
+        "name": "Lucian",
+        "reason": "アグレッシブプレイ"
+      }
+    ]
+  },
+  "sona": {
+    "top_synergies": [
+      {
+        "name": "Ezreal",
+        "reason": "ポークとサステイン"
+      },
+      {
+        "name": "Sivir",
+        "reason": "スケーリングとエンゲージ"
+      },
+      {
+        "name": "Kog'Maw",
+        "reason": "ハイパーキャリーサポート"
+      },
+      {
+        "name": "Jinx",
+        "reason": "レイトゲームコンビ"
+      },
+      {
+        "name": "Vayne",
+        "reason": "バフとピール"
+      }
+    ]
+  },
+  "soraka": {
+    "top_synergies": [
+      {
+        "name": "Ezreal",
+        "reason": "セーフプレイとサステイン"
+      },
+      {
+        "name": "Caitlyn",
+        "reason": "ポークとヒール"
+      },
+      {
+        "name": "Kog'Maw",
+        "reason": "スケーリングサポート"
+      },
+      {
+        "name": "Jinx",
+        "reason": "サステインでスケール"
+      },
+      {
+        "name": "Ashe",
+        "reason": "ポークとサステイン"
+      }
+    ]
+  },
+  "lux": {
+    "top_synergies": [
+      {
+        "name": "Caitlyn",
+        "reason": "長射程ポークコンビ"
+      },
+      {
+        "name": "Ezreal",
+        "reason": "ポークとバースト"
+      },
+      {
+        "name": "Jhin",
+        "reason": "CCとバースト"
+      },
+      {
+        "name": "Ashe",
+        "reason": "CCチェイン"
+      },
+      {
+        "name": "Varus",
+        "reason": "ポークシナジー"
+      }
+    ]
+  },
+  "brand": {
+    "top_synergies": [
+      {
+        "name": "Jhin",
+        "reason": "バーストダメージ"
+      },
+      {
+        "name": "Miss Fortune",
+        "reason": "AOEダメージ"
+      },
+      {
+        "name": "Ashe",
+        "reason": "CCとダメージ"
+      },
+      {
+        "name": "Ziggs",
+        "reason": "メイジコンビ"
+      },
+      {
+        "name": "Caitlyn",
+        "reason": "ポークとバースト"
+      }
+    ]
+  },
+  "zyra": {
+    "top_synergies": [
+      {
+        "name": "Ashe",
+        "reason": "スローとルートシナジー"
+      },
+      {
+        "name": "Caitlyn",
+        "reason": "ゾーニングとトラップ"
+      },
+      {
+        "name": "Jhin",
+        "reason": "ルートとバースト"
+      },
+      {
+        "name": "Miss Fortune",
+        "reason": "AOEダメージ"
+      },
+      {
+        "name": "Varus",
+        "reason": "ルートチェイン"
+      }
+    ]
+  },
+  "velkoz": {
+    "top_synergies": [
+      {
+        "name": "Ziggs",
+        "reason": "極長射程メイジコンビ"
+      },
+      {
+        "name": "Caitlyn",
+        "reason": "長射程ポークシージ"
+      },
+      {
+        "name": "Xerath",
+        "reason": "アーティラリーコンビ"
+      },
+      {
+        "name": "Ezreal",
+        "reason": "ポークシナジー"
+      },
+      {
+        "name": "Ashe",
+        "reason": "CCとポーク"
+      }
+    ]
+  },
+  "xerath": {
+    "top_synergies": [
+      {
+        "name": "Caitlyn",
+        "reason": "極長射程シージ"
+      },
+      {
+        "name": "Ziggs",
+        "reason": "メイジシージコンビ"
+      },
+      {
+        "name": "Ezreal",
+        "reason": "ポーク性能"
+      },
+      {
+        "name": "Vel'Koz",
+        "reason": "アーティラリーシナジー"
+      },
+      {
+        "name": "Ashe",
+        "reason": "長射程コンビ"
+      }
+    ]
+  },
+  "yuumi": {
+    "top_synergies": [
+      {
+        "name": "Ezreal",
+        "reason": "モビリティとサステイン"
+      },
+      {
+        "name": "Twitch",
+        "reason": "ステルスとバフ"
+      },
+      {
+        "name": "Sivir",
+        "reason": "エンゲージバフ"
+      },
+      {
+        "name": "Vayne",
+        "reason": "キャリーサポート"
+      },
+      {
+        "name": "Kog'Maw",
+        "reason": "ハイパーキャリーバフ"
+      }
+    ]
+  },
+  "zilean": {
+    "top_synergies": [
+      {
+        "name": "Ezreal",
+        "reason": "セーフティとスケーリング"
+      },
+      {
+        "name": "Vayne",
+        "reason": "蘇生でキャリー保護"
+      },
+      {
+        "name": "Twitch",
+        "reason": "スピードバフ"
+      },
+      {
+        "name": "Jinx",
+        "reason": "蘇生とスケーリング"
+      },
+      {
+        "name": "Kog'Maw",
+        "reason": "完全保護"
+      }
+    ]
+  },
+  "karma": {
+    "top_synergies": [
+      {
+        "name": "Caitlyn",
+        "reason": "ポークとシールド"
+      },
+      {
+        "name": "Ezreal",
+        "reason": "セーフプレイ"
+      },
+      {
+        "name": "Sivir",
+        "reason": "エンゲージとウェーブクリア"
+      },
+      {
+        "name": "Jhin",
+        "reason": "ポークとバフ"
+      },
+      {
+        "name": "Lucian",
+        "reason": "早期圧力"
+      }
+    ]
+  },
+  "tahmkench": {
+    "top_synergies": [
+      {
+        "name": "Vayne",
+        "reason": "最強ピールで完全保護"
+      },
+      {
+        "name": "Kog'Maw",
+        "reason": "ハイパーキャリー保護"
+      },
+      {
+        "name": "Twitch",
+        "reason": "ステルスと保護"
+      },
+      {
+        "name": "Aphelios",
+        "reason": "複雑な武器を安全に"
+      },
+      {
+        "name": "Senna",
+        "reason": "ファーム譲渡"
+      }
+    ]
+  },
+  "renata": {
+    "top_synergies": [
+      {
+        "name": "Jinx",
+        "reason": "蘇生でキャリー保護"
+      },
+      {
+        "name": "Twitch",
+        "reason": "攻撃速度バフ"
+      },
+      {
+        "name": "Kog'Maw",
+        "reason": "ハイパーキャリーサポート"
+      },
+      {
+        "name": "Vayne",
+        "reason": "バフとピール"
+      },
+      {
+        "name": "Aphelios",
+        "reason": "蘇生と保護"
+      }
+    ]
+  },
+  "milio": {
+    "top_synergies": [
+      {
+        "name": "Jinx",
+        "reason": "クレンズとバフ"
+      },
+      {
+        "name": "Vayne",
+        "reason": "ピールと保護"
+      },
+      {
+        "name": "Kog'Maw",
+        "reason": "レンジバフ"
+      },
+      {
+        "name": "Twitch",
+        "reason": "攻撃速度サポート"
+      },
+      {
+        "name": "Aphelios",
+        "reason": "クレンズとバフ"
+      }
+    ]
+  },
+  "swain": {
+    "top_synergies": [
+      {
+        "name": "Leona",
+        "reason": "CCでパッシブトリガー"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "CCチェイン"
+      },
+      {
+        "name": "Thresh",
+        "reason": "フックシナジー"
+      },
+      {
+        "name": "Blitzcrank",
+        "reason": "フックコンビ"
+      },
+      {
+        "name": "Pyke",
+        "reason": "フックとCC"
+      }
+    ]
+  },
+  "seraphine": {
+    "top_synergies": [
+      {
+        "name": "Miss Fortune",
+        "reason": "AOEコンビ"
+      },
+      {
+        "name": "Jinx",
+        "reason": "集団戦性能"
+      },
+      {
+        "name": "Sivir",
+        "reason": "AOEとエンゲージ"
+      },
+      {
+        "name": "Kai'Sa",
+        "reason": "チームファイト"
+      },
+      {
+        "name": "Ashe",
+        "reason": "CCチェイン"
+      }
+    ]
+  },
+  "yasuo": {
+    "top_synergies": [
+      {
+        "name": "Alistar",
+        "reason": "ノックアップシナジー"
+      },
+      {
+        "name": "Nautilus",
+        "reason": "CCチェイン"
+      },
+      {
+        "name": "Leona",
+        "reason": "エンゲージCC"
+      },
+      {
+        "name": "Gragas",
+        "reason": "ノックアップ"
+      },
+      {
+        "name": "Rakan",
+        "reason": "エンゲージCC"
+      }
+    ]
+  },
+  "rell": {
+    "top_synergies": [
+      {
+        "name": "Samira",
+        "reason": "ノックアップでUlt"
+      },
+      {
+        "name": "Yasuo",
+        "reason": "ノックアップシナジー"
+      },
+      {
+        "name": "Kai'Sa",
+        "reason": "エンゲージCC"
+      },
+      {
+        "name": "Miss Fortune",
+        "reason": "AOE CC"
+      },
+      {
+        "name": "Jinx",
+        "reason": "エンゲージとピール"
+      }
+    ]
+  }
+}
