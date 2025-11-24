@@ -89,7 +89,8 @@ class General(commands.Cog):
             'build': False,
             'stats': False,
             'patch': False,
-            'matchup': False
+            'matchup': False,
+            'synergy': False
         }
         
         rem = remaining_query.lower()
