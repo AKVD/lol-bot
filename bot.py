@@ -45,7 +45,7 @@ def start_health_server(port=8000):
     server = HTTPServer(('0.0.0.0', port), HealthCheckHandler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
-    print(f"✅ Health check server started on port {port}")
+    print(f"Health check server started on port {port}")
     return server
 
 class LoLBot(commands.Bot):
@@ -81,9 +81,9 @@ class LoLBot(commands.Bot):
                 import requests
                 response = requests.get(health_url, timeout=5)
                 if response.status_code == 200:
-                    print(f"🔍 Keep-alive ping successful")
+                    print(f"Keep-alive ping successful")
             except Exception as e:
-                print(f"⚠️ Keep-alive ping failed: {e}")
+                print(f"Keep-alive ping failed: {e}")
 
 # Create bot instance
 bot = LoLBot()
@@ -96,10 +96,10 @@ async def reload_cogs(interaction: discord.Interaction):
     try:
         await bot.reload_extension('cogs.general')
         await interaction.followup.send("✅ Reloaded successfully!")
-        print("✅ Manual reload completed")
+        print("Manual reload completed")
     except Exception as e:
         await interaction.followup.send(f"❌ Reload error: {str(e)}")
-        print(f"❌ Reload error: {e}")
+        print(f"Reload error: {e}")
 
 # Update and reload command
 @bot.tree.command(name='update', description='Update bot from git and reload (Admin only)')
@@ -125,12 +125,12 @@ async def update_bot(interaction: discord.Interaction):
         else:
             await interaction.followup.send(f"✅ Updated and reloaded!\n```{output[:500]}```")
         
-        print(f"✅ Update completed: {output}")
+        print(f"Update completed: {output}")
     except subprocess.TimeoutExpired:
         await interaction.followup.send("❌ Update timed out")
     except Exception as e:
         await interaction.followup.send(f"❌ Update error: {str(e)}")
-        print(f"❌ Update error: {e}")
+        print(f"Update error: {e}")
 
 # Health check command
 @bot.tree.command(name='ping', description='Check bot status')
@@ -143,16 +143,16 @@ def main():
     token = os.getenv('DISCORD_TOKEN')
     
     if not token:
-        print("❌ Error: DISCORD_TOKEN environment variable not set.")
-        print("💡 Create a .env file with: DISCORD_TOKEN=your_token_here")
-        print("💡 Or set environment variable: export DISCORD_TOKEN=your_token")
+        print("Error: DISCORD_TOKEN environment variable not set.")
+        print("Create a .env file with: DISCORD_TOKEN=your_token_here")
+        print("Or set environment variable: export DISCORD_TOKEN=your_token")
         return
 
     # Start health check server (Required for Koyeb)
     port = int(os.getenv('PORT', '8000'))
     start_health_server(port)
 
-    print("🚀 Starting bot...")
+    print("Starting bot...")
     bot.run(token)
 
 if __name__ == '__main__':

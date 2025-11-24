@@ -177,35 +177,32 @@ class General(commands.Cog):
             # 3. Counters (カウンター)
             if intents['counters']:
                 counters = get_counters(champion_slug, role=lane)
+                # Display counters
                 if counters:
                     # Top 5 hardest matchups (lowest win rate)
-                    # Low win rate = Hard for this champion = Should BAN if using this champ / Should PICK if facing this champ
                     top_counters = counters[:5]
                     counter_text = ""
                     for c in top_counters:
                         matches = c.get('matches', '?')
-                        # Translate counter name
                         norm_name = normalize_champion_name(c['name'])
                         if norm_name:
                             c_jp_name = get_japanese_name(norm_name)
                         else:
-                            c_jp_name = c['name'] # Fallback
-                            
-                        # Enhanced display with emoji and better formatting
-                        # Lower win rate = harder matchup for this champion
+                            c_jp_name = c['name']
+                        
+                        # Lower win rate = harder matchup
                         if c['win_rate'] < 47:
-                            difficulty = "🔴 極難"
+                            difficulty = "🔴 超不利"
                         elif c['win_rate'] < 49:
-                            difficulty = "🟠 難"
+                            difficulty = "🟠 不利"
                         elif c['win_rate'] < 51:
                             difficulty = "🟡 互角"
                         else:
                             difficulty = "🟢 有利"
                             
-                        counter_text += f"{difficulty} **{c_jp_name}**: {c['win_rate']}% ({matches}試合)\n"
+                        counter_text += f"{difficulty} **{c_jp_name}**: {c['win_rate']}% ({matches}試合)\\n"
 
                     # Bottom 5 easiest matchups (highest win rate)
-                    # High win rate = Easy for this champion = Should PICK if using this champ / Should BAN if facing this champ
                     worst_counters = counters[-5:] if len(counters) >= 5 else []
                     worst_counter_text = ""
                     for c in worst_counters:
@@ -224,7 +221,7 @@ class General(commands.Cog):
                         else:
                             status = "🌟 やや有利"
                             
-                        worst_counter_text += f"{status} **{c_jp_name}**: {c['win_rate']}% ({matches}試合)\n"
+                        worst_counter_text += f"{status} **{c_jp_name}**: {c['win_rate']}% ({matches}試合)\\n"
                     
                     # Add lane to title if specified
                     lane_display = ""
@@ -240,21 +237,21 @@ class General(commands.Cog):
                     
                     # Dual perspective labels
                     embed.add_field(
-                        name=f"🚫 不利なマッチアップ{lane_display}\n　├ 使う時: BANを推奨\n　└ 対面時: 選ぶべき", 
+                        name=f"🚫 不利なマッチアップ{lane_display}\\n　├ 使う時: BANを推奨\\n　└ 対面時: 選ぶべき", 
                         value=counter_text, 
                         inline=False
                     )
                     
                     if worst_counter_text:
                         embed.add_field(
-                            name=f"⚔️ 有利なマッチアップ{lane_display}\n　├ 使う時: 選ぶべき\n　└ 対面時: BANを推奨", 
+                            name=f"⚔️ 有利なマッチアップ{lane_display}\\n　├ 使う時: 選ぶべき\\n　└ 対面時: BANを推奨", 
                             value=worst_counter_text, 
                             inline=False
                         )
                 else:
                     embed.add_field(name="⚔️ カウンター", value="データを取得できませんでした。", inline=False)
 
-            # 3.5. Bot Lane Synergy (Botレーン相性)
+
             if intents['synergy']:
                 synergies = get_bot_synergies(champion_slug)
                 if synergies:
