@@ -4,7 +4,7 @@ from discord import app_commands
 import re
 from utils.scraper_counters import get_counters
 from utils.scraper_wiki import get_champion_skills
-from utils.champion_map import normalize_champion_name, extract_champion_name, get_japanese_name, extract_lane
+from utils.champion_map import normalize_champion_name, extract_champion_name, get_japanese_name, extract_lane, get_all_champions
 from utils.scraper_builds import get_build_data
 from utils.scraper_stats import get_champion_stats
 from utils.scraper_patch import get_patch_history
@@ -18,8 +18,36 @@ class General(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    async def champion_autocomplete(
+        self,
+        interaction: discord.Interaction,
+        current: str,
+    ) -> list[app_commands.Choice[str]]:
+        """
+        Autocomplete callback for champion names.
+        Filters champions based on user input (English or Japanese).
+        """
+        all_champions = get_all_champions()
+        current_lower = current.lower()
+        
+        # Filter champions that match the current input
+        choices = []
+        for en_name, jp_name in all_champions:
+            # Check if input matches English name or Japanese name
+            if (current_lower in en_name.lower() or 
+                current_lower in jp_name.lower() or 
+                en_name.lower().startswith(current_lower) or
+                jp_name.lower().startswith(current_lower)):
+                # Display as "Japanese (English)" for clarity
+                display_name = f"{jp_name} ({en_name})"
+                choices.append(app_commands.Choice(name=display_name, value=jp_name))
+        
+        # Discord limits autocomplete to 25 choices
+        return choices[:25]
+
     @app_commands.command(name='asklol', description='LoLチャンピオン情報取得（カウンター、ビルド、統計、スキル）')
     @app_commands.describe(query='チャンピオン名とキーワード（例：「アーリ ビルド」「ヤスオ 統計」）')
+    @app_commands.autocomplete(query=champion_autocomplete)
     async def asklol(self, interaction: discord.Interaction, query: str):
         """
         Get info for a champion.
