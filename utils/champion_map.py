@@ -493,3 +493,38 @@ def extract_lane(query):
     
     return None
 
+def get_all_champions():
+    """
+    Get a sorted list of all unique champions with their Japanese names.
+    Returns: List of tuples (english_name, japanese_name)
+    """
+    # Get all unique English champion names
+    unique_champs = sorted(set(CHAMPION_MAP.values()))
+    
+    # Create reverse mapping for Japanese names
+    jp_map = {}
+    for jp_name, en_name in CHAMPION_MAP.items():
+        if en_name not in jp_map:
+            jp_map[en_name] = jp_name
+        # Prefer katakana names over nicknames/variations
+        elif len(jp_name) > len(jp_map[en_name]):
+            jp_map[en_name] = jp_name
+    
+    # Return list of (english, japanese) tuples
+    result = []
+    for en_name in unique_champs:
+        jp_name = jp_map.get(en_name, en_name)
+        # Find the most appropriate Japanese name (katakana, not nickname)
+        for k, v in CHAMPION_MAP.items():
+            if v == en_name and k.startswith(('ア', 'イ', 'ウ', 'エ', 'オ', 'カ', 'キ', 'ク', 'ケ', 'コ', 
+                                              'サ', 'シ', 'ス', 'セ', 'ソ', 'タ', 'チ', 'ツ', 'テ', 'ト',
+                                              'ナ', 'ニ', 'ヌ', 'ネ', 'ノ', 'ハ', 'ヒ', 'フ', 'ヘ', 'ホ',
+                                              'マ', 'ミ', 'ム', 'メ', 'モ', 'ヤ', 'ユ', 'ヨ', 'ラ', 'リ',
+                                              'ル', 'レ', 'ロ', 'ワ', 'ヲ', 'ン', 'ガ', 'ギ', 'グ', 'ゲ',
+                                              'ゴ', 'ザ', 'ジ', 'ズ', 'ゼ', 'ゾ', 'ダ', 'ヂ', 'ヅ', 'デ',
+                                              'ド', 'バ', 'ビ', 'ブ', 'ベ', 'ボ', 'パ', 'ピ', 'プ', 'ペ', 'ポ')):
+                jp_name = k
+                break
+        result.append((en_name, jp_name))
+    
+    return result
