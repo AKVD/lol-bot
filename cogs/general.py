@@ -206,11 +206,40 @@ class General(commands.Cog):
             if intents['counters']:
                 counters = get_counters(champion_slug, role=lane)
                 if counters:
-                    # Filter to 1000+ games only
+                    # Separate by sample size
                     major_counters = [c for c in counters if c.get('matches', 0) >= 1000]
+                    minor_counters = [c for c in counters if 100 <= c.get('matches', 0) < 1000]
                     
-                    if not major_counters:
-                        embed.add_field(name="⚔️ カウンター", value="1000試合以上のデータが見つかりませんでした。", inline=False)
+                    # Strategy: Prioritize 1000+ data, supplement with 100-999 if needed
+                    hard_matchups = []
+                    easy_matchups = []
+                    data_warning = ""
+                    
+                    # Get hard matchups (low WR)
+                    if len(major_counters) >= 5:
+                        hard_matchups = major_counters[:5]
+                        data_note = "📊 1000試合以上"
+                    else:
+                        # Use major + minor to fill up to 5
+                        hard_matchups = major_counters[:5]
+                        needed = 5 - len(hard_matchups)
+                        if needed > 0 and minor_counters:
+                            hard_matchups.extend(minor_counters[:needed])
+                        data_note = "📊 混合データ"
+                        data_warning = "⚠️ 1000試合以上のデータが不足しているため、100-999試合のデータも含まれています。"
+                    
+                    # Get easy matchups (high WR)
+                    if len(major_counters) >= 5:
+                        easy_matchups = major_counters[-5:]
+                    else:
+                        # Use major + minor to fill up to 5
+                        easy_matchups = major_counters[-5:] if major_counters else []
+                        needed = 5 - len(easy_matchups)
+                        if needed > 0 and minor_counters:
+                            easy_matchups.extend(minor_counters[-needed:])
+                    
+                    if not hard_matchups:
+                        embed.add_field(name="⚔️ カウンター", value="十分なデータが見つかりませんでした。", inline=False)
                     else:
                         # Add lane to title if specified
                         lane_display = ""
@@ -224,9 +253,11 @@ class General(commands.Cog):
                             }
                             lane_display = f" ({lane_map_jp.get(lane, lane.capitalize())})"
                         
-                        # === DISADVANTAGEOUS MATCHUPS (Low win rate = Hard for this champion) ===
-                        hard_matchups = major_counters[:5]  # Top 5 hardest
+                        # === DISADVANTAGEOUS MATCHUPS ===
                         hard_text = ""
+                        if data_warning:
+                            hard_text = f"_{data_warning}_\n\n"
+                        
                         for c in hard_matchups:
                             matches = c.get('matches', 0)
                             norm_name = normalize_champion_name(c['name'])
@@ -245,14 +276,13 @@ class General(commands.Cog):
                             hard_text += f"{emoji} **{c_jp_name}** - {c['win_rate']}% WR ({matches:,}試合)\n"
                         
                         embed.add_field(
-                            name=f"🚫 {jp_name}不利なマッチアップ{lane_display}\n使う時: この相手をBANする | 対面時: この相手を選ぶ",
+                            name=f"🚫 {jp_name}不利なマッチアップ{lane_display}\n{data_note} | 使う時: BANする | 対面時: 選ぶ",
                             value=hard_text.strip(),
                             inline=False
                         )
                         
-                        # === ADVANTAGEOUS MATCHUPS (High win rate = Easy for this champion) ===
-                        if len(major_counters) >= 5:
-                            easy_matchups = major_counters[-5:]  # Bottom 5 (highest win rate)
+                        # === ADVANTAGEOUS MATCHUPS ===
+                        if easy_matchups:
                             easy_text = ""
                             for c in easy_matchups:
                                 matches = c.get('matches', 0)
@@ -270,7 +300,7 @@ class General(commands.Cog):
                                 easy_text += f"{emoji} **{c_jp_name}** - {c['win_rate']}% WR ({matches:,}試合)\n"
                             
                             embed.add_field(
-                                name=f"✅ {jp_name}有利なマッチアップ{lane_display}\n使う時: この相手と対面したい | 対面時: この相手をBANする",
+                                name=f"✅ {jp_name}有利なマッチアップ{lane_display}\n{data_note} | 使う時: 対面したい | 対面時: BANする",
                                 value=easy_text.strip(),
                                 inline=False
                             )
