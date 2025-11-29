@@ -210,35 +210,32 @@ class General(commands.Cog):
                     major_counters = [c for c in counters if c.get('matches', 0) >= 1000]
                     minor_counters = [c for c in counters if 100 <= c.get('matches', 0) < 1000]
                     
-                    # Strategy: Prioritize 1000+ data, supplement with 100-999 if needed
-                    hard_matchups = []
-                    easy_matchups = []
+                    # Determine which dataset to use
+                    valid_counters = []
                     data_warning = ""
                     
-                    # Get hard matchups (low WR)
-                    if len(major_counters) >= 5:
-                        hard_matchups = major_counters[:5]
+                    if len(major_counters) >= 10:
+                        valid_counters = major_counters
                         data_note = "📊 1000試合以上"
                     else:
-                        # Use major + minor to fill up to 5
-                        hard_matchups = major_counters[:5]
-                        needed = 5 - len(hard_matchups)
-                        if needed > 0 and minor_counters:
-                            hard_matchups.extend(minor_counters[:needed])
+                        # Combine and re-sort by win rate
+                        valid_counters = major_counters + minor_counters
+                        valid_counters.sort(key=lambda x: x['win_rate'])
+                        
                         data_note = "📊 混合データ"
                         data_warning = "⚠️ 1000試合以上のデータが不足しているため、100-999試合のデータも含まれています。"
                     
-                    # Get easy matchups (high WR)
-                    if len(major_counters) >= 5:
-                        easy_matchups = major_counters[-5:]
-                    else:
-                        # Use major + minor to fill up to 5
-                        easy_matchups = major_counters[-5:] if major_counters else []
-                        needed = 5 - len(easy_matchups)
-                        if needed > 0 and minor_counters:
-                            easy_matchups.extend(minor_counters[-needed:])
+                    # Split strictly by Win Rate to avoid contradictions
+                    # Hard: WR < 50% (Yasuo loses)
+                    # Easy: WR >= 50% (Yasuo wins)
+                    hard_candidates = [c for c in valid_counters if c['win_rate'] < 50.0]
+                    easy_candidates = [c for c in valid_counters if c['win_rate'] >= 50.0]
                     
-                    if not hard_matchups:
+                    # Take top 5 from each category
+                    hard_matchups = hard_candidates[:5]       # Lowest win rates
+                    easy_matchups = easy_candidates[-5:]      # Highest win rates
+                    
+                    if not hard_matchups and not easy_matchups:
                         embed.add_field(name="⚔️ カウンター", value="十分なデータが見つかりませんでした。", inline=False)
                     else:
                         # Add lane to title if specified
@@ -254,36 +251,39 @@ class General(commands.Cog):
                             lane_display = f" ({lane_map_jp.get(lane, lane.capitalize())})"
                         
                         # === DISADVANTAGEOUS MATCHUPS ===
-                        hard_text = ""
-                        if data_warning:
-                            hard_text = f"_{data_warning}_\n\n"
-                        
-                        for c in hard_matchups:
-                            matches = c.get('matches', 0)
-                            norm_name = normalize_champion_name(c['name'])
-                            c_jp_name = get_japanese_name(norm_name) if norm_name else c['name']
+                        if hard_matchups:
+                            hard_text = ""
+                            if data_warning:
+                                hard_text = f"_{data_warning}_\n\n"
+                                data_warning = "" # Clear so it doesn't show twice
                             
-                            # Win rate emoji
-                            if c['win_rate'] < 47:
-                                emoji = "🔴"
-                            elif c['win_rate'] < 49:
-                                emoji = "🟠"
-                            elif c['win_rate'] < 51:
-                                emoji = "🟡"
-                            else:
-                                emoji = "🟢"
+                            for c in hard_matchups:
+                                matches = c.get('matches', 0)
+                                norm_name = normalize_champion_name(c['name'])
+                                c_jp_name = get_japanese_name(norm_name) if norm_name else c['name']
+                                
+                                # Win rate emoji
+                                if c['win_rate'] < 47:
+                                    emoji = "🔴"
+                                elif c['win_rate'] < 49:
+                                    emoji = "🟠"
+                                else:
+                                    emoji = "🟡"
+                                
+                                hard_text += f"{emoji} **{c_jp_name}** - {c['win_rate']}% WR ({matches:,}試合)\n"
                             
-                            hard_text += f"{emoji} **{c_jp_name}** - {c['win_rate']}% WR ({matches:,}試合)\n"
-                        
-                        embed.add_field(
-                            name=f"🚫 {jp_name}不利なマッチアップ{lane_display}\n{data_note} | 使う時: BANする | 対面時: 選ぶ",
-                            value=hard_text.strip(),
-                            inline=False
-                        )
+                            embed.add_field(
+                                name=f"🚫 {jp_name}不利なマッチアップ{lane_display}\n{data_note} | 使う時: BANする | 対面時: 選ぶ",
+                                value=hard_text.strip(),
+                                inline=False
+                            )
                         
                         # === ADVANTAGEOUS MATCHUPS ===
                         if easy_matchups:
                             easy_text = ""
+                            if data_warning: # Show warning here if it wasn't shown above
+                                easy_text = f"_{data_warning}_\n\n"
+                            
                             for c in easy_matchups:
                                 matches = c.get('matches', 0)
                                 norm_name = normalize_champion_name(c['name'])
